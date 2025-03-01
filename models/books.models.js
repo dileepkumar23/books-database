@@ -24,7 +24,9 @@ const bookSchema = new mongoose.Schema({
     },
     rating: {
         type: Number,
-        required: true
+        min: 0,
+        max: 5,
+        default: 0
     },
     summary: String,
     coverImageUrl: String
